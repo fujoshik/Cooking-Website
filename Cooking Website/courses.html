@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Cooking Website</title>
+    </head>
+    <body>
+        <header class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo4.png"></a>
+                <section class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="courses.html">COURSES</a></li>
+                        <li><a href="contacts.html">CONTACTS</a></li>
+                    </ul>
+                </section>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <h1>Our Courses</h1>
+        </header>
+        
+
+
+        <!-- Content-->
+        
+        <section class="course">
+            <h1>Courses We Offer</h1>
+            <p>We offer a great diversity of different courses for complete beginners, intermediate and advanced chefs</p>
+
+            <section class="row">
+                <article class="course-col">
+                    <h3>Chinese cuisine</h3>
+                    <p>Chinese food staples such as rice, soy sauce, noodles, tea, chili oil, and tofu, 
+                        and utensils such as chopsticks and the wok, can now be found worldwide.
+                        The most praised Four Great Traditions in Chinese cuisine are Chuan, Lu, Yue, and Huaiyang, 
+                        representing cuisines of West, North, South, and East China.
+                    </p>
+                </article>
+                    
+                <article class="course-col">
+                    <h3>Japanese cuisine</h3>
+                    <p>The traditional cuisine of Japan is based on rice with miso soup and other dishes; 
+                        there is an emphasis on seasonal ingredients. 
+                        Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. 
+                        Seafood is common, often grilled, but also served raw as sashimi or in sushi.
+                    </p>
+                </article>
+
+                <article class="course-col">
+                    <h3>French cuisine</h3>
+                    <p>Cheese and wine are a major part of the cuisine. 
+                        Culinary tourism and the Guide Michelin helped to acquaint 
+                        commoners with the cuisine bourgeoise of the urban elites 
+                        and the peasant cuisine of the French countryside starting in the 20th century.
+                    </p>
+                </article>
+            </section>
+
+            <section class="row">
+                <article class="course-col">
+                    <h3>Italian cuisine</h3>
+                    <p>One of the main characteristics of Italian cuisine is its simplicity, 
+                        with many dishes made up of few ingredients, and therefore Italian cooks 
+                        often rely on the quality of the ingredients, rather than the complexity of preparation.
+                        It is one of the best-known and most appreciated gastronomies worldwide.
+                    </p>
+                </article>
+                    
+                <article class="course-col">
+                    <h3>Indian cuisine</h3>
+                    <p>Indian cuisine consists of a variety of regional and traditional cuisines native to India. 
+                        Given the diversity in soil, climate, culture, ethnic groups, and occupations, 
+                        these cuisines vary substantially and use locally available spices, herbs, vegetables, and fruits. 
+                    </p>
+                </article>
+
+                <article class="course-col">
+                    <h3>Turkish cuisine</h3>
+                    <p>It is largely the heritage of Ottoman cuisine. 
+                    Turkish cuisine has in turn influenced those and other neighbouring cuisines, 
+                    including those of Southeast Europe (Balkans), Central Europe, and Western Europe.
+                    </p>
+                </article>
+            </section>
+        </section>
+
+        
+        <!-- Advantages -->
+        <section class="benefits">
+            <h1>Advantages</h1>
+            <p>Why you should choose us and sign up for our courses</p>
+
+            <section class="row">
+                <article class="benefits-col">
+                    <img src="images/we-are-cooking.jpg">
+                    <h3>Skilled Chefs</h3>
+                    <p>Our teachers are all well-known chefs from all arounf the world and will teach you all the essentials!</p>
+                </article>
+
+                <article class="benefits-col">
+                    <img src="images/facility.jpg">
+                    <h3>Great Facilities</h3>
+                    <p>We are equipped with the latest kitchen utilities and will provide you with everything you need for preparing a good meal!</p>
+                </article>
+
+                <article class="benefits-col">
+                    <img src="images/fun-cooking.jpg">
+                    <h3>Fun Classes</h3>
+                    <p>Our classes are always full with students and thanks to the humourous teachers it's never boring!</p>
+                </article>
+            </section>
+        </section>
+
+
+
+        <!-- Footer-->
+
+        <footer>
+            <h4>Изготвил:</h4>
+            <p>Гергана Колева; специалност: "Софтуерно инженерство"; факултетен №: 2209011791</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </footer>
+
+
+        <button type="button" id="btn-back-to-top">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+
+
+        <!-- JavaScript -->
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+            let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+                ) {
+                mybutton.style.display = "block";
+                } else {
+                mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+
+    </body>
+</html>
